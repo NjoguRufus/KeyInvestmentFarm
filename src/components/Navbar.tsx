@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -21,11 +21,15 @@ const Navbar = () => {
       transition={{ duration: 0.7 }}
       className="fixed top-4 left-0 right-0 mx-auto z-50 w-[95%] max-w-6xl glass px-6 py-3 flex items-center justify-between"
     >
-      {/* Logo */}
+      {/* Logo - scaled visually, layout size unchanged so navbar height stays same */}
       <a href="#home" className="flex items-center gap-2">
-        <div className="w-9 h-9 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
-          <Leaf className="w-5 h-5 text-primary" />
-        </div>
+        <span className="w-9 h-9 flex shrink-0 flex items-center justify-center overflow-visible">
+          <img
+            src="/assets/keylogo.png"
+            alt="Key Investment"
+            className="h-9 w-9 object-contain scale-150 origin-center"
+          />
+        </span>
         <span className="font-heading font-bold text-lg text-foreground tracking-tight">
           KEY <span className="text-primary">INVESTMENT</span>
         </span>

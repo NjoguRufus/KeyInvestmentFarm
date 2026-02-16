@@ -1,4 +1,4 @@
-import { Leaf, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -15,9 +15,11 @@ const Footer = () => (
         {/* Brand */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
-              <Leaf className="w-4 h-4 text-primary" />
-            </div>
+            <img
+              src="/assets/keylogo.png"
+              alt="Key Investment"
+              className="w-8 h-8 object-contain"
+            />
             <span className="font-heading font-bold text-foreground">
               KEY <span className="text-primary">INVESTMENT</span>
             </span>
