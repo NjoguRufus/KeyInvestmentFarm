@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -22,18 +23,18 @@ const Navbar = () => {
       className="fixed top-4 left-0 right-0 mx-auto z-50 w-[95%] max-w-6xl glass px-6 py-3 flex items-center justify-between"
     >
       {/* Logo - scaled visually, layout size unchanged so navbar height stays same */}
-      <a href="#home" className="flex items-center gap-2">
-        <span className="w-9 h-9 flex shrink-0 flex items-center justify-center overflow-visible">
-          <img
-            src="/assets/keylogo.png"
-            alt="Key Investment"
-            className="h-9 w-9 object-contain scale-150 origin-center"
-          />
-        </span>
-        <span className="font-heading font-bold text-lg text-foreground tracking-tight">
-          KEY <span className="text-primary">INVESTMENT</span>
-        </span>
-      </a>
+      <Link to="/" className="flex items-center gap-2">
+          <span className="w-9 h-9 flex shrink-0 flex items-center justify-center overflow-visible">
+            <img
+              src="/assets/keylogo.png"
+              alt="Key Investment"
+              className="h-9 w-9 object-contain scale-150 origin-center"
+            />
+          </span>
+          <span className="font-heading font-bold text-lg text-foreground tracking-tight">
+            KEY <span className="text-primary">INVESTMENT</span>
+          </span>
+      </Link>
 
       {/* Desktop links */}
       <div className="hidden lg:flex items-center gap-8">
